@@ -1,3 +1,4 @@
+; 全局变量和本地变量
 (def ^:dynamic v 1) ; v is a global binding
 
 (defn f1 []
