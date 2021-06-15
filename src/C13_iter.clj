@@ -15,3 +15,18 @@
     (print ".")
     (flush))
   (println "thread stopped"))
+
+;列表推导式
+(def cols "ABCD")
+(def rows (range 1 4))
+
+(println "for demo")
+(dorun
+  (for [col cols :when (not= col \B)
+        row rows :while (< row 3)]
+    (println (str col row))))
+
+(println "\n doseq demo")
+(doseq [col cols :when (not= col \B)
+        row rows :while (< row 3)]
+  (println (str col row)))
